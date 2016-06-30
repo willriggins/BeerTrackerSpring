@@ -19,6 +19,8 @@ public interface BeerRepository extends CrudRepository<Beer, Integer> {
     public Iterable<Beer> findByTypeOrderByNameAsc(String type);
     public Iterable<Beer> findByUser(User user);
 
-    @Query("SELECT b FROM Beer b WHERE LOWER(name) LIKE '%' || LOWER(?) || '%'")
-    List<Beer> searchByName(String name);
+    @Query("SELECT b FROM Beer b WHERE b.name LIKE ?1%")
+    public Iterable<Beer> searchByName(String name);
+
+
 }
