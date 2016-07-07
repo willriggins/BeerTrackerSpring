@@ -1,6 +1,6 @@
 package com.theironyard.controllers;
 
-import com.theironyard.PasswordStorage;
+import com.theironyard.util.PasswordStorage;
 import com.theironyard.entities.Beer;
 import com.theironyard.entities.User;
 import com.theironyard.services.BeerRepository;
